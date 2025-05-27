@@ -1,16 +1,11 @@
-from pydantic import BaseSettings
+from pydantic_settings import BaseSettings
 from functools import lru_cache
 class Settings(BaseSettings):
     """Application settings loaded from environment variables"""
     
     # Database settings
     database_url: str
-    db_host: str
-    db_port: int 
-    db_name: str
-    db_user: str
-    db_password: str
-    
+ 
     # JWT settings
     jwt_secret_key: str
     jwt_algorithm: str 
