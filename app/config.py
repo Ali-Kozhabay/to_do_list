@@ -5,16 +5,16 @@ class Settings(BaseSettings):
     
     # Database settings
     database_url: str
-    db_host: str = "localhost"
-    db_port: int = 5432
+    db_host: str
+    db_port: int 
     db_name: str
     db_user: str
     db_password: str
     
     # JWT settings
     jwt_secret_key: str
-    jwt_algorithm: str = "HS256"
-    jwt_access_token_expire_minutes: int = 30
+    jwt_algorithm: str 
+    jwt_access_token_expire_minutes:int
 
     class Config:
         env_file='.env'
